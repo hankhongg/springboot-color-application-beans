@@ -5,6 +5,9 @@ import com.get_to_know_beans.ColorApplication.services.ColorPrinter;
 import com.get_to_know_beans.ColorApplication.services.PinkPrinter;
 import com.get_to_know_beans.ColorApplication.services.RedPrinter;
 import com.get_to_know_beans.ColorApplication.services.impl.ColorPrinterImpl;
+import com.get_to_know_beans.ColorApplication.services.impl.JapaneseBluePrinter;
+import com.get_to_know_beans.ColorApplication.services.impl.JapaneseRedPrinter;
+import com.get_to_know_beans.ColorApplication.services.impl.JapanesePinkPrinter;
 import com.get_to_know_beans.ColorApplication.services.impl.EnglishBluePrinter;
 import com.get_to_know_beans.ColorApplication.services.impl.EnglishPinkPrinter;
 import com.get_to_know_beans.ColorApplication.services.impl.EnglishRedPrinter;
@@ -15,15 +18,15 @@ import org.springframework.context.annotation.Configuration;
 public class colorConfig {
     @Bean
     public BluePrinter bluePrinter() {
-        return new EnglishBluePrinter();
+        return new JapaneseBluePrinter();
     }
     @Bean
     public PinkPrinter pinkPrinter() {
-        return new EnglishPinkPrinter();
+        return new JapanesePinkPrinter();
     }
     @Bean
     public RedPrinter redPrinter() {
-        return new EnglishRedPrinter();
+        return new JapaneseRedPrinter();
     }
 
     @Bean
