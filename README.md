@@ -34,7 +34,7 @@ java -jar quickstart-0.0.1-SNAPSHOT.jar (to run test the project but remember to
 ***3 layers spring boot architecture***
  + **Presentation Layer** -> Controllers (@RestController)
  + **Service Layer** -> Business logic (@Serv ice)
- + **Persistence Layer **-> Entities (@Entity) + Repositories (@Repository)
+ + **Persistence Layer**-> Entities (@Entity) + Repositories (@Repository)
 
 
 @Service: is also a bean => able to inject this and to have dependencies injected into this class || in the services layer 
