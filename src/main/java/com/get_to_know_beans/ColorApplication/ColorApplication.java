@@ -11,12 +11,16 @@ import java.util.logging.Logger;
 @Log
 @SpringBootApplication
 public class ColorApplication implements CommandLineRunner {
+	private ColorPrinter colorPrinter;
+	public ColorApplication(ColorPrinter colorPrinter) { // gotta declare it inside "beans" per se configuration class
+		this.colorPrinter = colorPrinter;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(ColorApplication.class, args);
 	}
 	@Override
 	public void run(String...args){
-		final ColorPrinter colorPrinter = new ColorPrinterImpl();
 		log.info(colorPrinter.print());
 	}
 }
